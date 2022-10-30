@@ -1,7 +1,9 @@
 # What Do Patients Value? Using Natural Language Processing to Define a Good Doctor's Visit
 
 ## Description
-In this project, we wanted to find out what patients value in their doctors, especially with regards to specific qualities or attitudes. To achieve this goal, we define patient-valued qualities as nouns or adjectives that patients use to describe highly-rated doctors, and we conside in what context these words are used. More specifically, logistic regression is used to identify word presence or absence in reviews and highly frequent or salient words are considered more by the model. Dependency parsing is then used to contextualize these nouns and adjectives by tying them back to specific phrases in which they are used (e.g., "a caring doctor").
+In this project, we wanted to find out what patients value in their doctors, regarding specific qualities or attitudes. To achieve this goal, we define patient-valued qualities as nouns or 
+adjectives that patients use to describe highly-rated doctors, and we consider in what context these words are used. More specifically, logistic regression is used to identify word presence or 
+absence in reviews and highly frequent or salient words are considered more by the model. Dependency parsing is then used to contextualize these nouns and adjectives by tying them back to specific phrases in which they are used (e.g., "a caring doctor").
 
 ## Future Work
 Future work in this project aims to assess gender bias in the review corpus and continue to validate our findings. Current action items for this project include the following:
