@@ -1,4 +1,4 @@
 # ignore json files
 .json
 .DS_Store
-
+.temp
