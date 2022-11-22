@@ -37,13 +37,13 @@ for review in yelp_reviews:
 yelp_stars = []
 
 # break after some amount of reviews if shorter runtime desired
-count = 0
+count = 0 # change this number if running for evaluation_set.json to get different set of reviews
 
 with open('yelp_academic_dataset_review.json', encoding="utf8") as f:
     for line in f:
         yelp_stars.append(json.loads(line))
         count += 1
-        if count > 10000000: # e.g., 1,000,000
+        if count > 10000000: # e.g., 1,000,000 but this number can change depending on if initial count changes
             break
 
 
@@ -108,6 +108,6 @@ for review in yelp_stars:
 # write the reviews to a json file
 # https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file
 
-with open('gender_evaluation_set.json', 'w', encoding='utf8') as f:
+with open('new_train_set_1billion.json', 'w', encoding='utf8') as f:
     json.dump(joined_review_dict, f, indent=4)
 

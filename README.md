@@ -25,4 +25,5 @@ This code is used for publications in the following venues:
 1. Download [Yelp dataset](https://www.yelp.com/dataset)
 2. Put business and review academic dataset JSON files in the same directory as JSON preprocessing Python script
 3. Run JSON preprocessing script to get JSON used as input for patient values Python script
-4. Run patient values Python script
+4. Run JSON preprocessing script again, changing "new_train_set_1billion.json" to "evaluation_set.json" and changing count variable to account for different reviews
+5. Run patient values Python script
