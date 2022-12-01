@@ -327,9 +327,10 @@ for word in key_words:
     acomp_words.append(word)
 
 # add manual tags that are apparent to a human reader
+# start from acomp_words and filter for those that are human-validated
+
 manual_acomps = ['professional', 'easy', 'wonderful', 'kind', 'helpful', 'clean', 'horrible', 'thorough', 'friendly', 'comfortable', 'caring', 'terrible', 'efficient', 'unprofessional']
 
-manual_acomps = manual_acomps + acomp_words # use both sets of words
 
 # perform data structure manipulation for spacy dependency parsing
 # islice goes through the iterable and stops at the nth position
