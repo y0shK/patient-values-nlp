@@ -270,7 +270,7 @@ print('F-1 score: ')
 print(f1_score(y_test, y_pred_array, pos_label= 1))
 
 """
-5. use dependency parsing to tie logistic regression results back to dependency parsing
+5. use dependency parsing to tie logistic regression results back to the context in which they are used
 """
 
 # load spacy for dependency parsing
@@ -329,12 +329,21 @@ for word in key_words:
 # add manual tags that are apparent to a human reader
 manual_acomps = ['professional', 'easy', 'wonderful', 'kind', 'helpful', 'clean', 'horrible', 'thorough', 'friendly', 'comfortable', 'caring', 'terrible', 'efficient', 'unprofessional']
 
+manual_acomps = manual_acomps + acomp_words # use both sets of words
+
 # perform data structure manipulation for spacy dependency parsing
+# islice goes through the iterable and stops at the nth position
+# take(n, iterable) is meant to go through data.items() and give the first 100 key-value pairs from the realdata json file
+
 def take(n, iterable):
     "Return first n items of the iterable as a list"
     return list(islice(iterable, n))
 
 # load in evaluation set here
+# take a new evaluation set and use take(n, iterable) to get 100 reviews from it
+# then, use dependency parsing to see if the words generated match up with our intuition found from train/test set
+# this is evaluation that verifies the output of the words, not the metrics of the logistic regression performance
+
 path = 'evaluation_set.json'
 
 with open(path, encoding="utf8") as f:
