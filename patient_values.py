@@ -36,15 +36,12 @@ else:
 """
 
 # perform preprocessing
-# tokenize corpus, remove stopwords, lemmatize
+# tokenize corpus & remove stopwords
 
 nltk.download('punkt')
 from nltk import word_tokenize
 nltk.download("stopwords")
 from nltk.corpus import stopwords
-
-nltk.download('wordnet')
-from nltk.stem import WordNetLemmatizer
 
 # create customized data structure for logistic regression
 # e.g., {businessID1: [name, review, rating], ...}
